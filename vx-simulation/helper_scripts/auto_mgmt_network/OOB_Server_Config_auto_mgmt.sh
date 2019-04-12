@@ -2,7 +2,7 @@
 # Created by Topology-Converter v4.6.8
 #    Template Revision: v4.6.8
 #    https://github.com/cumulusnetworks/topology_converter
-#    using topology data from: cumulus-its-symmetric.dot
+#    using topology data from: ezdemo.dot
 
 echo "################################################"
 echo "  Running Automatic Management Server Setup..."
@@ -15,13 +15,13 @@ echo " Detected vagrant user is: $username"
 #       KNOBS
 #######################
 
-REPOSITORY="https://github.com/CumulusNetworks/cumulus-its-symmetric"
-REPONAME="cumulus-its-symmetric"
+REPOSITORY="https://github.com/CumulusNetworks/ezdemo"
+REPONAME="ezdemo"
 
 #Install Automation Tools
 puppet=0
 ansible=1
-ansible_version=2.7.5
+ansible_version=2.7.10
 
 #######################
 

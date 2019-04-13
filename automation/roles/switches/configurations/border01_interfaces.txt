@@ -10,6 +10,10 @@ auto swp1
 iface swp1
     mtu 9216
 
+auto swp3
+iface swp3
+    mtu 9216
+
 auto vagrant
 iface vagrant inet dhcp
 
@@ -18,6 +22,24 @@ iface mgmt
     address 127.0.0.1/8
     vrf-table auto
 
-auto swp3
-iface swp3
-    mtu 9216
+auto bridge
+iface bridge
+    bridge-vlan-aware yes
+    bridge-ports vni11 
+    bridge-vids 11
+    bridge-pvid 1
+
+auto vlan11
+iface vlan11
+    address 192.168.11.1/24
+    vlan-id 11
+    vlan-raw-device bridge
+
+auto vni11
+iface vni11
+    vxlan-id 11
+    vxlan-local-tunnelip 10.4.4.4
+    bridge-access 11
+    bridge-learning off
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes

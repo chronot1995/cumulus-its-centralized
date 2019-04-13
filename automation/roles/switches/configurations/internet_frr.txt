@@ -14,11 +14,10 @@ interface swp1
 router bgp 65555
  bgp router-id 10.5.5.5
  bgp bestpath as-path multipath-relax
- neighbor 10.100.100.2 remote-as external
+ neighbor swp1 interface remote-as external
  !
  address-family ipv4 unicast
   network 10.5.5.5/32
-  network 10.100.100.0/24
  exit-address-family
 !
 line vty

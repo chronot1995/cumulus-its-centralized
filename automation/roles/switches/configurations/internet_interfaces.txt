@@ -8,14 +8,7 @@ iface eth0 inet dhcp
 
 auto swp1
 iface swp1
-    bridge-vids 100 111 222
     mtu 9216
-
-auto bridge
-iface bridge
-    bridge-ports swp1
-    bridge-vids 100 111 222
-    bridge-vlan-aware yes
 
 auto vagrant
 iface vagrant inet dhcp
@@ -24,9 +17,3 @@ auto mgmt
 iface mgmt
     address 127.0.0.1/8
     vrf-table auto
-
-auto vlan100
-iface vlan100
-    address 10.100.100.1/24
-    vlan-id 100
-    vlan-raw-device bridge

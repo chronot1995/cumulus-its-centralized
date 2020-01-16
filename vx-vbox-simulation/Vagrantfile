@@ -748,7 +748,7 @@ end
 
     device.vm.hostname = "server01"
 
-    device.vm.box = "yk0/ubuntu-xenial"
+    device.vm.box = "generic/debian10"
     device.vm.provider "virtualbox" do |v|
       v.name = "#{simid}_server01"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']
@@ -822,7 +822,7 @@ end
 
     device.vm.hostname = "server02"
 
-    device.vm.box = "yk0/ubuntu-xenial"
+    device.vm.box = "generic/debian10"
     device.vm.provider "virtualbox" do |v|
       v.name = "#{simid}_server02"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']
@@ -896,7 +896,7 @@ end
 
     device.vm.hostname = "server03"
 
-    device.vm.box = "yk0/ubuntu-xenial"
+    device.vm.box = "generic/debian10"
     device.vm.provider "virtualbox" do |v|
       v.name = "#{simid}_server03"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']

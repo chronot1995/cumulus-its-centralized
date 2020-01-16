@@ -2,7 +2,7 @@
 # Created by Topology-Converter v4.7.0
 #    Template Revision: v4.7.0
 #    https://github.com/cumulusnetworks/topology_converter
-#    using topology data from: cumulus-its-symmetric.dot
+#    using topology data from: cumulus-its-centralized.dot
 
 echo "################################################"
 echo "  Running Automatic Management Server Setup..."
@@ -15,8 +15,8 @@ echo " Detected vagrant user is: $username"
 #       KNOBS
 #######################
 
-REPOSITORY="https://github.com/CumulusNetworks/cumulus-its-symmetric"
-REPONAME="cumulus-its-symmetric"
+REPOSITORY="https://github.com/CumulusNetworks/cumulus-its-centralized"
+REPONAME="cumulus-its-centralized"
 
 #Install Automation Tools
 puppet=0

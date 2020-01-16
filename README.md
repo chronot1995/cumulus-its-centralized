@@ -1,4 +1,4 @@
-## ezdemo
+## cumulus-its-centralized
 
 ### Summary:
 
@@ -6,7 +6,7 @@ This is an Ansible demo which configures Centralized EVPN VXLAN
 
 ### Network Diagram:
 
-![Network Diagram](https://github.com/chronot1995/ezdemo/blob/master/documentation/ezdemo.png)
+![Network Diagram](https://github.com/chronot1995/cumulus-its-centralized/blob/master/documentation/cumulus-its-centralized.png)
 
 ### Initializing the demo environment:
 
@@ -22,11 +22,11 @@ First, make sure that the following is currently running on your machine:
 
 3. Copy the Git repo to your local machine:
 
-    ```git clone https://github.com/chronot1995/ezdemo```
+    ```git clone https://github.com/chronot1995/cumulus-its-centralized```
 
 4. Change directories to the following
 
-    ```ezdemo```
+    ```cumulus-its-centralized```
 
 6. Run the following:
 
@@ -41,11 +41,11 @@ First, make sure that the following is currently running on your machine:
 
 2. Copy the Git repo unto the oob-mgmt-server:
 
-    ```git clone https://github.com/chronot1995/ezdemo```
+    ```git clone https://github.com/chronot1995/cumulus-its-centralized```
 
 3. Change directories to the following
 
-    ```ezdemo/automation```
+    ```cumulus-its-centralized/automation```
 
 4. Run the following:
 
@@ -82,7 +82,7 @@ Helpful Linux troubleshooting commands:
 
 3. The following command was used to run the Topology Converter within the vx-simulation directory:
 
-    ```python2 topology_converter.py ezdemo.dot -c```
+    ```python2 topology_converter.py cumulus-its-centralized.dot -c```
 
     After the above command is executed, the following configuration changes are necessary:
 

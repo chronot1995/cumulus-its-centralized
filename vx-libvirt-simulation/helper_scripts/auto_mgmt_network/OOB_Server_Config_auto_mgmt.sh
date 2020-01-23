@@ -21,7 +21,7 @@ REPONAME="cumulus-its-centralized"
 #Install Automation Tools
 puppet=0
 ansible=1
-ansible_version=2.9.2
+ansible_version=2.9.3
 
 #######################
 

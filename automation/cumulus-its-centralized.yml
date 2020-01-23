@@ -1,5 +1,5 @@
 #####
-# Host config for cumulus-its-symmetric
+# Host config for cumulus-its-centralized
 #####
 
 - hosts: switches

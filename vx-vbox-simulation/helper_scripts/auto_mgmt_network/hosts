@@ -17,6 +17,7 @@
 192.168.200.11 server01
 192.168.200.12 server02
 192.168.200.13 server03
+192.168.200.14 server04
 
 
 # The following lines are desirable for IPv6 capable hosts

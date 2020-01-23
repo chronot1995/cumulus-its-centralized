@@ -198,7 +198,9 @@ No EVPN prefixes (of requested type) exist
 
 1. To shutdown the demo, run the following command from the vx-simulation directory:
 
-    ```vagrant destroy -f```
+```
+vagrant destroy -f
+```
 
 2. This topology was configured using the Cumulus Topology Converter found at the following URL:
 
@@ -237,7 +239,7 @@ Will be replaced with the following:
     #Install Automation Tools
     puppet=0
     ansible=1
-    ansible_version=2.9.2
+    ansible_version=2.9.3
 
 Add the following ```echo``` right before the end of the file.
 

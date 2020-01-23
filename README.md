@@ -52,76 +52,77 @@ First, make sure that the following is currently running on your machine:
 
 1. Copy the Git repo to your local machine:
 
-    ```
+```
     git clone https://github.com/chronot1995/cumulus-its-centralized/
-    ```
+```
 
 2. Change directories to the following
 
-    ```
+```
     cumulus-its-centralized
-    ```
+```
 
 3a. Run the following for Virtualbox:
 
-    ```
+```
     ./start-vagrant-vbox-poc.sh
-    ```
+```
 
 3b. Run the following for Libvirt:
-    ```
+
+```
     ./start-vagrant-libvirt-poc.sh
-    ```
+```
 
 ### Running the Ansible Playbook
 
 1a. SSH into the Virtualbox oob-mgmt-server:
 
-    ```
+```
     cd vx-vbox-simulation
     vagrant ssh oob-mgmt-server
-    ```
+```
 
 1a. SSH into the Libvirt oob-mgmt-server:
 
-    ```
+```
     cd vx-libvirt-simulation  
     vagrant ssh oob-mgmt-server
-    ```
+```
 
 2. Copy the Git repo unto the oob-mgmt-server:
 
-    ```
+```
     git clone https://github.com/chronot1995/cumulus-its-centralized
-    ```
+```
 
 3. Change directories to the following
 
-    ```
+```
     cumulus-its-centralized/automation
-    ```
+```
 
 4. Run the following:
 
-    ```
+```
     ./provision.sh
-    ```
+```
 
 This will run the automation script and configure the environment.
 
 5. Optional: Run the following playbook in the automation directory if you'd like to simulate a firewall on fw01:
 
-    ```
+```
     ansible-playbook break-server-ping.yml
-    ```
+```
 
 This will put an ICMP block on the fw01 interfaces that connect to border01. You will be able to ping within the same VRF, as it doesn't go through the firewall, but you won't be able to ping between VRFs. You still will be able to SSH between VRFs, as a further test.
 
 To disable the ICMP block, simply run the following:
 
-    ```
+```
     ansible-playbook fix-server-pings.yml
-    ```
+```
 
 ### Troubleshooting
 

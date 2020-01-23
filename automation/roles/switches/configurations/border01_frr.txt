@@ -24,6 +24,7 @@ router bgp 65444
  address-family ipv4 unicast
   network 10.4.4.4/32
   network 192.168.11.0/24
+  network 192.168.22.0/24
  exit-address-family
  !
  address-family l2vpn evpn

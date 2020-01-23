@@ -25,8 +25,8 @@ iface mgmt
 auto bridge
 iface bridge
     bridge-vlan-aware yes
-    bridge-ports vni11 
-    bridge-vids 11
+    bridge-ports vni11 vni22
+    bridge-vids 11 22
     bridge-pvid 1
 
 auto vlan11
@@ -35,11 +35,26 @@ iface vlan11
     vlan-id 11
     vlan-raw-device bridge
 
+auto vlan22
+iface vlan22
+    address 192.168.22.1/24
+    vlan-id 22
+    vlan-raw-device bridge
+
 auto vni11
 iface vni11
     vxlan-id 11
     vxlan-local-tunnelip 10.4.4.4
     bridge-access 11
+    bridge-learning off
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes
+
+auto vni22
+iface vni22
+    vxlan-id 22
+    vxlan-local-tunnelip 10.4.4.4
+    bridge-access 22
     bridge-learning off
     mstpctl-bpduguard yes
     mstpctl-portbpdufilter yes

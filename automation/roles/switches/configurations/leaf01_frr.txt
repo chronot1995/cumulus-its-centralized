@@ -18,7 +18,6 @@ router bgp 65111
  !
  address-family ipv4 unicast
   network 10.1.1.1/32
-  network 192.168.22.0/24
  exit-address-family
  !
  address-family l2vpn evpn

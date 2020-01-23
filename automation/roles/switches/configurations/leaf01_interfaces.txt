@@ -18,7 +18,7 @@ iface swp11
 
 auto bridge
 iface bridge
-    bridge-ports swp10 swp11 vni11
+    bridge-ports swp10 swp11 vni11 vni22
     bridge-vids 11 22
     bridge-vlan-aware yes
 
@@ -42,7 +42,7 @@ iface vlan11
 
 auto vlan22
 iface vlan22
-    address 192.168.22.1/24
+    address 192.168.22.11/24
     vlan-id 22
     vlan-raw-device bridge
 
@@ -53,4 +53,13 @@ iface vni11
     mstpctl-bpduguard yes
     mstpctl-portbpdufilter yes
     vxlan-id 11
+    vxlan-local-tunnelip 10.1.1.1
+
+auto vni22
+iface vni22
+    bridge-access 22
+    bridge-learning off
+    mstpctl-bpduguard yes
+    mstpctl-portbpdufilter yes
+    vxlan-id 22
     vxlan-local-tunnelip 10.1.1.1

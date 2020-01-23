@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook ezdemo.yml
+ansible-playbook cumulus-its-centralized.yml

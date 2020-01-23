@@ -7,6 +7,7 @@ graph training {
  "server01" [function="host" os="generic/debian10" memory="768" config="./helper_scripts/extra_server_config.sh" mgmt_ip="192.168.200.11"]
  "server02" [function="host" os="generic/debian10" memory="768" config="./helper_scripts/extra_server_config.sh" mgmt_ip="192.168.200.12"]
  "server03" [function="host" os="generic/debian10" memory="768" config="./helper_scripts/extra_server_config.sh" mgmt_ip="192.168.200.13"]
+ "server04" [function="host" os="generic/debian10" memory="768" config="./helper_scripts/extra_server_config.sh" mgmt_ip="192.168.200.14"]
 
  "leaf01":"swp1" -- "spine01":"swp1"
  "leaf02":"swp1" -- "spine01":"swp2"
@@ -15,5 +16,6 @@ graph training {
  "server01":"eth1" -- "leaf01":"swp10"
  "server02":"eth1" -- "leaf01":"swp11"
  "server03":"eth1" -- "leaf02":"swp10"
+ "server04":"eth1" -- "leaf02":"swp11"
 
  }

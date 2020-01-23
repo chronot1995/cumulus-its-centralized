@@ -91,7 +91,7 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
 
-  simid = 1579811402
+  simid = 1579814161
 
   config.vm.provider "virtualbox" do |v|
     v.gui=false
@@ -208,7 +208,7 @@ end
       # link for swp5 --> border01:eth0
       device.vm.network "private_network", virtualbox__intnet: "#{simid}_net14", auto_config: false , :mac => "443839000019"
 
-      # link for swp6 --> internet:eth0
+      # link for swp6 --> fw01:eth0
       device.vm.network "private_network", virtualbox__intnet: "#{simid}_net15", auto_config: false , :mac => "44383900001b"
 
       # link for swp7 --> server01:eth0
@@ -620,7 +620,7 @@ end
       # link for eth0 --> oob-mgmt-switch:swp5
       device.vm.network "private_network", virtualbox__intnet: "#{simid}_net14", auto_config: false , :mac => "44383900001a"
 
-      # link for swp1 --> internet:swp1
+      # link for swp1 --> fw01:swp1
       device.vm.network "private_network", virtualbox__intnet: "#{simid}_net4", auto_config: false , :mac => "443839000007"
 
       # link for swp3 --> spine01:swp3
@@ -683,15 +683,15 @@ vagrant_interface_rule
 
 end
 
-  ##### DEFINE VM for internet #####
-  config.vm.define "internet" do |device|
+  ##### DEFINE VM for fw01 #####
+  config.vm.define "fw01" do |device|
 
-    device.vm.hostname = "internet"
+    device.vm.hostname = "fw01"
 
     device.vm.box = "CumulusCommunity/cumulus-vx"
     device.vm.box_version = "3.7.11"
     device.vm.provider "virtualbox" do |v|
-      v.name = "#{simid}_internet"
+      v.name = "#{simid}_fw01"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']
       v.memory = 1024
     end

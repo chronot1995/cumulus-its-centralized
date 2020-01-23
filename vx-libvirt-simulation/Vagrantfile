@@ -200,9 +200,9 @@ end
   config.vm.define "oob-mgmt-switch" do |device|
 
     device.vm.hostname = "oob-mgmt-switch"
-
-    device.vm.box = "CumulusCommunity/cumulus-vx"
     device.vm.box_version = "3.7.11"
+    device.vm.box = "CumulusCommunity/cumulus-vx"
+
     device.vm.provider :libvirt do |v|
       v.memory = 512
     end
@@ -272,7 +272,7 @@ end
             :libvirt__tunnel_port => "#{ 9014 + offset }",
             :libvirt__iface_name => 'swp5',
             auto_config: false
-      # link for swp6 --> internet:eth0
+      # link for swp6 --> fw01:eth0
       device.vm.network "private_network",
             :mac => "44:38:39:00:00:1b",
             :libvirt__tunnel_type => 'udp',
@@ -775,7 +775,7 @@ end
             :libvirt__tunnel_port => "#{ 8014 + offset }",
             :libvirt__iface_name => 'eth0',
             auto_config: false
-      # link for swp1 --> internet:swp1
+      # link for swp1 --> fw01:swp1
       device.vm.network "private_network",
             :mac => "44:38:39:00:00:07",
             :libvirt__tunnel_type => 'udp',
@@ -847,10 +847,10 @@ vagrant_interface_rule
 
 end
 
-  ##### DEFINE VM for internet #####
-  config.vm.define "internet" do |device|
+  ##### DEFINE VM for fw01 #####
+  config.vm.define "fw01" do |device|
 
-    device.vm.hostname = "internet"
+    device.vm.hostname = "fw01"
 
     device.vm.box = "CumulusCommunity/cumulus-vx"
     device.vm.box_version = "3.7.11"

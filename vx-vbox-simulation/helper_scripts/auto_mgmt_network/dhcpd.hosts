@@ -23,7 +23,7 @@ host spine01 {hardware ethernet 44:38:39:00:00:18; fixed-address 192.168.200.3; 
 
 host border01 {hardware ethernet 44:38:39:00:00:1a; fixed-address 192.168.200.4; option host-name "border01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
-host internet {hardware ethernet 44:38:39:00:00:1c; fixed-address 192.168.200.5; option host-name "internet"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
+host fw01 {hardware ethernet 44:38:39:00:00:1c; fixed-address 192.168.200.5; option host-name "fw01"; option cumulus-provision-url "http://192.168.200.254/ztp_oob.sh";  } 
 
 host server01 {hardware ethernet 44:38:39:00:00:1e; fixed-address 192.168.200.11; option host-name "server01"; } 
 
